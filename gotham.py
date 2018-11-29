@@ -26,7 +26,7 @@ im = merge_channels(r, g, b)
 
 def sharpen(image, a, b):
     """Sharpening an image: Blur and then subtract from original"""
-    blurred = skimage.filters.gaussian_filter(image, sigma=10, multichannel=True)
+    blurred = skimage.filters.gaussian(image, sigma=10, multichannel=True)
     sharper = np.clip(image * a - blurred * b, 0, 1.0)
     return sharper
 
