@@ -1,3 +1,8 @@
+# To suppress the warning : 
+#       UserWarning: Possible precision loss when converting from float64 to uint8
+# Run with $python -W ignore gotham.py
+#
+
 import skimage
 from skimage import io, filters
 # from skimage.viewer import ImageViewer
