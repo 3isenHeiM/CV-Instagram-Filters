@@ -2,6 +2,9 @@ import skimage
 from skimage import io, filters
 # from skimage.viewer import ImageViewer
 import numpy as np
+import time
+
+start = time.time()
 
 print('Instagram Filter Remake: Gotham')
 original_image = skimage.io.imread('images/zell_am_see_snowboarding.jpg')
@@ -70,3 +73,6 @@ r, g, b = split_image_into_channels(sharper)
 b_adjusted = channel_adjust(b, [0, 0.047, 0.118, 0.251, 0.318, 0.392, 0.42, 0.439, 0.475, 0.561, 0.58, 0.627, 0.671, 0.733, 0.847, 0.925, 1])
 gotham = merge_channels(r, g, b_adjusted)
 skimage.io.imsave('images/5_blue_adjusted.jpg', gotham)
+
+elapsed = time.time() - start
+print 'Elapsed time: %.3fs' % (elapsed)
