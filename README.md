@@ -30,6 +30,10 @@ desaturated, and white/black balance is off on both ends.
 </p>
 
 # 4. Sharpening the image
+
+This step take most of the time for executing the script.
+It takes approximately 3s on an Odroid C2.
+
 Now look at those fluffy trees,
 <p align="left">
   <img height=400 width=400 src="images/4_sharpened.jpg">
