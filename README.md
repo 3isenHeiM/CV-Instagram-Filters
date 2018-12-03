@@ -54,14 +54,19 @@ The depth of colours around the boots is nice, as is the extra contrast on the s
 
 Overall, it's turned a dull shot into a great playful image. All while maintaing true to the original Instagram Gothom filter.
 
-### Execution Time
-1. On odroid C2 :  
+### Execution Time on Odroid C2
+1. With image saving at each step :  
 ```
 # python -W ignore gotham.py
   Instagram Filter Remake: Gotham
   Elapsed time: 6.295s
 ```
-
+2. Without image saving :
+```
+# python gotham.py 
+  Instagram Filter Remake: Gotham
+  Elapsed time: 4.848s
+```
 
 ### Installation on Odroid
 1. Install SciPy following [this guide](https://www.scipy.org/install.html). basically running this :  

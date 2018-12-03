@@ -57,27 +57,27 @@ def channel_adjust(channel, values):
 r, g, b = split_image_into_channels(original_image)
 r_interp = channel_adjust(r, [0, 0.8, 1.0])
 red_channel_adj = merge_channels(r_interp, g, b)
-skimage.io.imsave('images/1_red_channel_adj.jpg', red_channel_adj)
+# skimage.io.imsave('images/1_red_channel_adj.jpg', red_channel_adj)
 
 # 2. Mid tone colour boost
 r, g, b = split_image_into_channels(original_image)
 r_boost_lower = channel_adjust(r, [0, 0.05, 0.1, 0.2, 0.3, 0.5, 0.7, 0.8, 0.9, 0.95, 1.0])
 r_boost_img = merge_channels(r_boost_lower, g, b)
-skimage.io.imsave('images/2_mid_tone_colour_boost.jpg', r_boost_img)
+# skimage.io.imsave('images/2_mid_tone_colour_boost.jpg', r_boost_img)
 
 # 3. Making the blacks bluer
 bluer_blacks = merge_channels(r_boost_lower, g, np.clip(b + 0.03, 0, 1.0))
-skimage.io.imsave('images/3_bluer_blacks.jpg', bluer_blacks)
+# skimage.io.imsave('images/3_bluer_blacks.jpg', bluer_blacks)
 
 # 4. Sharpening the image
 sharper = sharpen(bluer_blacks, 1.3, 0.3)
-skimage.io.imsave('images/4_sharpened.jpg', sharper)
+# skimage.io.imsave('images/4_sharpened.jpg', sharper)
 
 # 5. Blue channel boost in lower-mids, decrease in upper-mids
 r, g, b = split_image_into_channels(sharper)
 b_adjusted = channel_adjust(b, [0, 0.047, 0.118, 0.251, 0.318, 0.392, 0.42, 0.439, 0.475, 0.561, 0.58, 0.627, 0.671, 0.733, 0.847, 0.925, 1])
 gotham = merge_channels(r, g, b_adjusted)
-skimage.io.imsave('images/5_blue_adjusted.jpg', gotham)
+# skimage.io.imsave('images/5_blue_adjusted.jpg', gotham)
 
 elapsed = time.time() - start
 print 'Elapsed time: %.3fs' % (elapsed)
