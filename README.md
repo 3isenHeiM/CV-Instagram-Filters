@@ -53,3 +53,15 @@ The depth of colours around the boots is nice, as is the extra contrast on the s
 <p></p>
 
 Overall, it's turned a dull shot into a great playful image. All while maintaing true to the original Instagram Gothom filter.
+
+
+### Installation on Odroid
+Install SciPy following [this guide](https://www.scipy.org/install.html). basically running this :
+
+`sudo apt-get install python-numpy python-scipy python-matplotlib ipython python-pandas python-sympy python-nose`
+
+Install Cython (required to build scikit-image)
+`apt install cython`
+
+Install `scikit-image` (new version of `skimage`)
+`pip install scikit-image`
