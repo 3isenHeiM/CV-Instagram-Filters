@@ -56,12 +56,13 @@ Overall, it's turned a dull shot into a great playful image. All while maintaing
 
 
 ### Installation on Odroid
-Install SciPy following [this guide](https://www.scipy.org/install.html). basically running this :
-
+1. Install SciPy following [this guide](https://www.scipy.org/install.html). basically running this :  
 `sudo apt-get install python-numpy python-scipy python-matplotlib ipython python-pandas python-sympy python-nose`
 
-Install Cython (required to build scikit-image)
+2. Install Cython (required to build scikit-image)  
 `apt install cython`
 
-Install `scikit-image` (new version of `skimage`)
+3. Install `scikit-image` (new version of `skimage`)  
 `pip install scikit-image`
+
+
